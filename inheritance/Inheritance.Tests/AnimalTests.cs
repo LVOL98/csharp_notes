@@ -41,6 +41,16 @@ namespace Inheritance.Tests
             Assert.Equal(expected, cat.Sound());
         }
 
+        [Fact]
+        public void Given_dog_ToString_return_Im_a_dog()
+        {
+            //Given
+            var dog = new Dog();
+
+            //Then
+            Assert.Equal("I'm a: Dog", dog.ToString());
+        }
+
         // Needed because of the static variable
         // This is an example of horrible code, which is intentional as the
         // meaning of it is to better understand static
