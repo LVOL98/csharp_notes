@@ -5,7 +5,7 @@ namespace Inheritance
     public abstract class Animal
     {
         public static int population { get; set; }
-        public string name;
+        public string name = "Animal";
 
         public Animal()
         {

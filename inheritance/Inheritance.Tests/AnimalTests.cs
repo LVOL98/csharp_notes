@@ -42,13 +42,25 @@ namespace Inheritance.Tests
         }
 
         [Fact]
-        public void Given_dog_ToString_return_Im_a_dog()
+        public void Given_dog_ToString_return_Im_a_Dog()
         {
             //Given
             var dog = new Dog();
 
             //Then
             Assert.Equal("I'm a: Dog", dog.ToString());
+        }
+
+        [Fact]
+        public void Given_cat_ToString_returns_Im_a_Cat()
+        {
+            //Given
+            var cat = new Cat();
+
+            //Then
+            // As Cat does not handle the inherited field of name, it
+            // it inherits the default name given in Animal
+            Assert.Equal("I'm a: Animal", cat.ToString());
         }
 
         // Needed because of the static variable
