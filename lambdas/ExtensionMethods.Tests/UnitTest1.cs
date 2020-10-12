@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Delegates.Tests
+namespace ExtensionMethods.Tests
 {
     public class UnitTest1
     {
