@@ -5,17 +5,22 @@ namespace LocalFunctions.Tests
 {
     public class LocalFunctionsTests
     {
-        [Fact]
-        public void Local_addition_function_given_3_3_return_6()
+        [Theory]
+        [InlineData(3, 3)]
+        [InlineData(1, 42)]
+        [InlineData(0, -1)]
+        [InlineData(-3, -2)]
+        [InlineData(3, -2)]
+        public void Local_addition_function_given_x_y_returns_addition_of_them(int value1, int value2)
         {
             //Given
             int addition(int x, int y) { return x + y; };
 
             //When
-            var actual = addition(3, 3);
+            var actual = addition(value1, value2);
 
             //Then
-            AssemblyLoadEventArgs.Equals(6, actual);
+            AssemblyLoadEventArgs.Equals(6, value1 + value2);
         }
     }
 }
