@@ -6,10 +6,5 @@ namespace ExtensionMethods
         {
             text + "%";
         }
-
-        static void Main(string[] args)
-        {
-            var text = "test";
-        }
     }
 }
