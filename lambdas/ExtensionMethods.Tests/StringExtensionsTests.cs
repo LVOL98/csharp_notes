@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using static ExtensionMethods;
+using static ExtensionMethods.StringExtension;
 
 namespace ExtensionMethods.Tests
 {
@@ -13,10 +13,10 @@ namespace ExtensionMethods.Tests
             string text = "test";
 
             //When
-            text.AddPercent();
+            var actual = text.AddPercent();
 
             //Then
-            Assert.Equal("test%", text);
+            Assert.Equal("test%", actual);
         }
     }
 }
